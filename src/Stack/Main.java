@@ -25,7 +25,7 @@ public class Main
         st.getHeight();
         System.out.println(st.pop());
 
-        String infixExpression = "3+(2*2)-4";
+        String infixExpression = "K*L+M/N";
         System.out.println("Infix to Postfix: " + st.infixToPostfix(infixExpression));
         System.out.println("Infix to Prefix: " + st.infixToPrefix(infixExpression));
 
