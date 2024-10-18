@@ -197,4 +197,23 @@ class BinarySearchTree
             System.out.print(list.get(i)+" ");
         }
     }
+
+    public boolean isBST(Node root)
+    {
+        return isBSTHelper(root,Integer.MIN_VALUE,Integer.MAX_VALUE);
+    }
+    public boolean isBSTHelper(Node node,int min,int max)
+    {
+        if(node==null)
+        {
+            return true;
+        }
+
+        if(node.value <=min || node.value>=max)
+        {
+            return false;
+        }
+
+        return isBSTHelper(node.left,min,node.value) && isBSTHelper(node.right,node.value,max);
+    }
 }
