@@ -46,7 +46,7 @@ public class InfixToPrefix
 
             else if(c=='(')
             {
-                while(!st.empty() && st.peek()==')')
+                while(!st.empty() && st.peek()!=')')
                 {
                     result.append(st.pop());
                 }

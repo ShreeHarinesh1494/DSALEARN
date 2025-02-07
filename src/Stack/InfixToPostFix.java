@@ -26,6 +26,8 @@ public class InfixToPostFix {
         // Traverse the infix expression from left to right
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
+            if(c==' ')
+                continue;
 
             // If the character is an operand (a-z, A-Z, 0-9), add it to result
             if (Character.isLetterOrDigit(c)) {
@@ -39,7 +41,7 @@ public class InfixToPostFix {
             else if (c == ')') {
                 while (!st.isEmpty() && st.peek() != '(') {
                     result.append(st.pop());
-                }
+                }y
                 st.pop(); // Remove '(' from stack
             }
             // If the character is an operator
